@@ -16,9 +16,12 @@ public class ServerApplication {
 		
 		ServerSocket ss = new ServerSocket(4220);
 		ServerSocket ss1= new ServerSocket(4221);
-		String[] malay = {"Selamat pagi","Selamat malam","Apa khabar?","Terima kasih","Selamat tinggal","Ada apa?"};
-		String[] arab = {"صباح الخير", "طاب مساؤك", "كيف حالك؟", "شكرا لك", "مع السلامة", "ما أخبارك؟"};
-		String[] korean = {"좋은 아침", "안녕히 주무세요", "어떻게 지내세요?", "감사합니다", "안녕", "뭐야?"};
+		String[] malay = {"Selamat pagi","Selamat malam","Apa khabar?",
+				"Terima kasih","Selamat tinggal","Ada apa?"};
+		String[] arab = {"صباح الخير", "طاب مساؤك", "كيف حالك؟", "شكرا لك", 
+				"مع السلامة", "ما أخبارك؟"};
+		String[] korean = {"좋은 아침", "안녕히 주무세요", "어떻게 지내세요?", "감사합니다", 
+				"안녕", "뭐야?"};
 		int pointer = 0;
         while (true) {
     		Socket socket = ss.accept();
@@ -28,11 +31,10 @@ public class ServerApplication {
             DataInputStream dataInputStream = new DataInputStream(inputStream);
             
             String message = dataInputStream.readUTF();
-            System.out.println("The message sent from the socket was: " + message);
+            System.out.println("The message sent from the socket was: " 
+            + message);
             System.out.println("Closing sockets.");
        
-            
-            
             Socket socket1 = ss1.accept();
     		
     		InputStream inputStream1 = socket1.getInputStream();

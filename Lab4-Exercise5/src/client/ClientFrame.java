@@ -91,7 +91,8 @@ public class ClientFrame extends JFrame{
 		this.add(cPanel, BorderLayout.CENTER);		
 	}
 
-	public static void updateResult(String result) throws UnsupportedEncodingException {
+	public static void updateResult(String result) throws 
+	UnsupportedEncodingException {
 		//String res = new String(result.getBytes(), "UTF-16");
 		label.setText(result);
 	}
